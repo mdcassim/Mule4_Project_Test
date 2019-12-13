@@ -30,7 +30,6 @@
 								<muleVersion>3.9.2</muleVersion>
 								<username>${anypoint.username}</username>
 								<password>${anypoint.password}</password>
-								<target>https://anypoint.mulesoft.com/cloudhub/#/console/home/addApplication</target>
 								<targetType>CloudHub</targetType>
 								<applicationName>${artifactId}-${maven.build.timestamp}</applicationName>
 								<environment>Sandbox</environment>

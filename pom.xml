@@ -25,6 +25,7 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<configuration>
 				<cloudHubDeployment>
 								<muleVersion>${mule.version}</muleVersion>
 								<username>${anypoint.username}</username>
@@ -37,6 +38,7 @@
 								<workerType>${cloudhub.workerType}</workerType>
 								<workers>${cloudhub.workers}</workers>
 							</cloudHubDeployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

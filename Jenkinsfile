@@ -30,7 +30,15 @@ pipeline {
             steps {
 				echo "Testing phase"
                  sh 'curl -uadmin:AP5r3rBQ9jvLqtQkCihjHKafUhq -T /home/jenkins/node/workspace/Mule_CICD_Abhishek/target/test1-1.0.0-SNAPSHOT-mule-application.jar "http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local/$BUILD_NUMBER/test1-1.0.0-SNAPSHOT-mule-application.jar"'
-	    }
+			}
         }
+		stage('Deploy CloudHub') { 
+			//environment {
+			//	ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
+			//}
+			steps {
+				sh 'mvn deploy -P cloudhub -Dmule.version=3.9.0 -Danypoint.username=ankitshastri05 -Danypoint.password=Ashu52824@' 
+			}
+		}
     }
 }

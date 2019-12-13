@@ -31,7 +31,7 @@
 								<deploymentTimeout>300000</deploymentTimeout>
 								<username>${anypoint.username}</username>
 								<password>${anypoint.password}</password>
-								//<redeploy>true</redeploy>
+								
 								<applicationName>Testing</applicationName>
 								<environment>Sandbox</environment>
 								<businessGroup>${anypoint.businessGroup}</businessGroup>

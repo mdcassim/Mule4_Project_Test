@@ -23,21 +23,20 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>3.9.2</version>
 				<extensions>true</extensions>
 				<configuration>
-				<cloudHubDeployment>
+								<deploymentType>cloudhub</deploymentType>
 								<muleVersion>3.9.2</muleVersion>
 								<username>${anypoint.username}</username>
 								<password>${anypoint.password}</password>
-								<applicationName>${artifactId}-${maven.build.timestamp}</applicationName>
+								<target>CloudHub</target>
+								<targetType>CloudHub</targetType>
+								<applicationName>Testing App</applicationName>
 								<environment>Sandbox</environment>
 								<businessGroup>${anypoint.businessGroup}</businessGroup>
-								<region>${cloudhub.region}</region>
-								<uri>${anypoint.uri}</uri>
-								<workerType>${cloudhub.workerType}</workerType>
-								<workers>${cloudhub.workers}</workers>
-							</cloudHubDeployment>
+								<url>https://anypoint.mulesoft.com</url>
+								<redeploy>true</redeploy>
 				</configuration>
 				<executions>
 							<execution>
@@ -49,6 +48,13 @@
 							</execution>
 						</executions>
 			</plugin>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 

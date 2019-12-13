@@ -25,15 +25,18 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-				<configuration>
-				// <deploymentType>cloudhub</deploymentType>
-				<muleVersion>3.8.4</muleVersion>
-				<username>${anypoint.username}</username>
-				<password>${anypoint.password}</password>
-				<redeploy>true</redeploy>
-				<environment>SANDBOX</environment>
-				<workerType>Micro</workerType>
-				</configuration>
+				<cloudHubDeployment>
+								<muleVersion>${mule.version}</muleVersion>
+								<username>${anypoint.username}</username>
+								<password>${anypoint.password}</password>
+								<applicationName>${artifactId}-${maven.build.timestamp}</applicationName>
+								<environment>SANDBOX</environment>
+								<businessGroup>${anypoint.businessGroup}</businessGroup>
+								<region>${cloudhub.region}</region>
+								<uri>${anypoint.uri}</uri>
+								<workerType>${cloudhub.workerType}</workerType>
+								<workers>${cloudhub.workers}</workers>
+							</cloudHubDeployment>
 			</plugin>
 		</plugins>
 	</build>

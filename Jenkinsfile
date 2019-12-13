@@ -37,7 +37,7 @@ pipeline {
 			//	ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
 			//}
 			steps {
-				sh 'mvn clean package deploy -DmuleDeploy -P cloudhub -Dmule.version=3.9.0 -Dmule.artifact="http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local/$BUILD_NUMBER/test1-1.0.0-SNAPSHOT-mule-application.jar" -Danypoint.username=ankitshastri05 -Danypoint.password=Ashu52824@' 
+				sh 'mvn clean package deploy:deploy mule:deploy -DmuleDeploy -P cloudhub -Dmule.version=3.9.0 -Dmule.artifact="http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local/$BUILD_NUMBER/test1-1.0.0-SNAPSHOT-mule-application.jar" -Danypoint.username=ankitshastri05 -Danypoint.password=Ashu52824@' 
 			}
 		}
     }

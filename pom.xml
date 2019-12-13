@@ -27,11 +27,11 @@
 				<extensions>true</extensions>
 				<configuration>
 				<cloudHubDeployment>
-								<muleVersion>${mule.version}</muleVersion>
+								<muleVersion>3.9.2</muleVersion>
 								<username>${anypoint.username}</username>
 								<password>${anypoint.password}</password>
 								<applicationName>${artifactId}-${maven.build.timestamp}</applicationName>
-								<environment>SANDBOX</environment>
+								<environment>Sandbox</environment>
 								<businessGroup>${anypoint.businessGroup}</businessGroup>
 								<region>${cloudhub.region}</region>
 								<uri>${anypoint.uri}</uri>
@@ -39,6 +39,15 @@
 								<workers>${cloudhub.workers}</workers>
 							</cloudHubDeployment>
 				</configuration>
+				<executions>
+							<execution>
+								<id>deploy</id>
+								<phase>deploy</phase>
+								<goals>
+									<goal>deploy</goal>
+								</goals>
+							</execution>
+						</executions>
 			</plugin>
 		</plugins>
 	</build>

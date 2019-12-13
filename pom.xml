@@ -30,7 +30,6 @@
 								<muleVersion>3.9.2</muleVersion>
 								<username>${anypoint.username}</username>
 								<password>${anypoint.password}</password>
-								<targetType>CloudHub</targetType>
 								<applicationName>${artifactId}-${maven.build.timestamp}</applicationName>
 								<environment>Sandbox</environment>
 								<businessGroup>${anypoint.businessGroup}</businessGroup>

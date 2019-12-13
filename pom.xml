@@ -26,7 +26,7 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				<deploymentType>cloudhub</deploymentType>
+				// <deploymentType>cloudhub</deploymentType>
 				<muleVersion>3.8.4</muleVersion>
 				<username>${anypoint.username}</username>
 				<password>${anypoint.password}</password>

@@ -26,6 +26,13 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				<deploymentType>cloudhub</deploymentType>
+				<muleVersion>3.8.4</muleVersion>
+				<username>${anypoint.username}</username>
+				<password>${anypoint.password}</password>
+				<redeploy>true</redeploy>
+				<environment>SANDBOX</environment>
+				<workerType>Micro</workerType>
 				</configuration>
 			</plugin>
 		</plugins>

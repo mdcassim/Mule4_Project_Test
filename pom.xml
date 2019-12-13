@@ -26,8 +26,9 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-								<deploymentType>cloudhub</deploymentType>
+								<cloudHubDeployment>
 								<muleVersion>3.9.2</muleVersion>
+								<deploymentTimeout>300000</deploymentTimeout>
 								<username>${anypoint.username}</username>
 								<password>${anypoint.password}</password>
 								<redeploy>true</redeploy>
@@ -38,7 +39,7 @@
 								<uri>https://anypoint.mulesoft.com</uri>
 								<workerType>${cloudhub.workerType}</workerType>
 								<workers>${cloudhub.workers}</workers>
-				</configuration>
+								</cloudHubDeployment>
 				<executions>
 							<execution>
 								<id>deploy</id>
@@ -48,16 +49,59 @@
 								</goals>
 							</execution>
 						</executions>
+						</configuration>
 			</plugin>
 			<plugin>
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-deploy-plugin</artifactId>
-<configuration>
-<skip>true</skip>
-</configuration>
-</plugin>
-		</plugins>
-	</build>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.mule.tools.maven</groupId>
+                <artifactId>mule-maven-plugin</artifactId>
+                <version>${mule.maven.plugin.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <classifier>mule-application</classifier>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+                <configuration>
+                    <parallel>methods</parallel>
+                    <threadCount>10</threadCount>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.mulesoft.munit.tools</groupId>
+                <artifactId>munit-maven-plugin</artifactId>
+                <version>${munit.version}</version>
+                <executions>
+                    <execution>
+                        <id>test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>test</goal>
+                            <goal>coverage-report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <coverage>
+                        <runCoverage>true</runCoverage>
+                        <formats>
+                            <format>html</format>
+                        </formats>
+                    </coverage>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 	<dependencies>
         <dependency>

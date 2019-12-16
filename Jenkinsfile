@@ -29,7 +29,7 @@ pipeline {
         stage('Deliver') {
             steps {
 				echo "Testing phase"
-                 sh 'curl -uadmin:AP5r3rBQ9jvLqtQkCihjHKafUhq -T /home/jenkins/node/workspace/Mule_CICD_Abhishek/target/test1-1.0.0-SNAPSHOT-mule-application.jar "http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local/$BUILD_NUMBER/test1-1.0.0-SNAPSHOT-mule-application.jar"'
+                 sh 'curl -uadmin:AP7GYRXDfu6Q6VZCmgkygxJjAZ4 -T /home/jenkins/node/workspace/Mule_CICD_Abhishek/target/test1-1.0.0-SNAPSHOT-mule-application.jar "http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local/$BUILD_NUMBER/test1-1.0.0-SNAPSHOT-mule-application.jar"'
 			}
         }
 		stage('Deploy CloudHub') { 

@@ -38,7 +38,7 @@ pipeline {
 			//}
 			steps {
 				sh 'curl -uadmin:AP7GYRXDfu6Q6VZCmgkygxJjAZ4 -O "http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local/$BUILD_NUMBER/test1-1.0.0-SNAPSHOT-mule-application.jar"'
-				sh 'mvn deploy:deploy-file -DgeneratePom=false -DrepositoryId=jfrog -Durl=http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local -DpomFile=pom.xml -Dfile=/home/jenkins/node/workspace/Mule_CICD_Abhishek/test1-1.0.0-SNAPSHOT-mule-application.jar -Danypoint.username=ankitshastri05 -Danypoint.password=Ashu52824@' 
+				sh 'mvn deploy:deploy-file -DgeneratePom=false -DrepositoryId=jfrog -Durl -DpomFile=pom.xml -Dfile=/home/jenkins/node/workspace/Mule_CICD_Abhishek/test1-1.0.0-SNAPSHOT-mule-application.jar -Danypoint.username=ankitshastri05 -Danypoint.password=Ashu52824@' 
 			}
 		}
     }

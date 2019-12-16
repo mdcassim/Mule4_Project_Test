@@ -26,7 +26,8 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-								<deploymentType>cloudhub</deploymentType>
+				<cloudHubDeployment>
+								
 								<muleVersion>3.9.2</muleVersion>
 								<deploymentTimeout>300000</deploymentTimeout>
 								<username>${anypoint.username}</username>
@@ -39,6 +40,7 @@
 								<uri>https://anypoint.mulesoft.com/cloudhub/#/console/home/applications</uri>
 								<workerType>${cloudhub.workerType}</workerType>
 								<workers>${cloudhub.workers}</workers>
+								</cloudHubDeployment>
 								</configuration>
 				<executions>
 							<execution>

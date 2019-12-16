@@ -37,7 +37,7 @@ pipeline {
 			//	ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
 			//}
 			steps {
-				sh 'curl -uadmin:AP7GYRXDfu6Q6VZCmgkygxJjAZ4 -O "http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local/$BUILD_NUMBER/test1-1.0.0-SNAPSHOT-mule-application.jar"
+				sh 'curl -uadmin:AP7GYRXDfu6Q6VZCmgkygxJjAZ4 -O "http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local/$BUILD_NUMBER/test1-1.0.0-SNAPSHOT-mule-application.jar"'
 				// sh 'mvn deploy:deploy-file -DgeneratePom=false -DrepositoryId=jfrog -Durl=http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local -DpomFile=pom.xml -Dfile=target/test1-1.0.0-SNAPSHOT-mule-application.jar -Danypoint.username=ankitshastri05 -Danypoint.password=Ashu52824@' 
 			}
 		}

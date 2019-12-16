@@ -17,8 +17,6 @@
 		<app.runtime>4.2.1</app.runtime>
 		<mule.maven.plugin.version>3.2.7</mule.maven.plugin.version>
 	</properties>
-	<profile>
-  <id>cloudhub</id>
 	<build>
 		<plugins>
 			<plugin>
@@ -63,7 +61,6 @@
 </plugin>
 		</plugins>
 	</build>
-	</profile>
 
 	<dependencies>
         <dependency>

@@ -36,7 +36,7 @@
 								<environment>Sandbox</environment>
 								<businessGroup>${anypoint.businessGroup}</businessGroup>
 								<region>${cloudhub.region}</region>
-								<uri>https://anypoint.mulesoft.com</uri>
+								<uri>https://anypoint.mulesoft.com/cloudhub/#/console/home/applications</uri>
 								<workerType>${cloudhub.workerType}</workerType>
 								<workers>${cloudhub.workers}</workers>
 								</configuration>

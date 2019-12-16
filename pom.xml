@@ -29,8 +29,8 @@
 								
 								<muleVersion>3.9.2</muleVersion>
 								<deploymentTimeout>300000</deploymentTimeout>
-								<username>${anypoint.username}</username>
-								<password>${anypoint.password}</password>
+								<username>ankitshastri05</username>
+								<password>Ashu52824@</password>
 								
 								<applicationName>Testing</applicationName>
 								<environment>Sandbox</environment>

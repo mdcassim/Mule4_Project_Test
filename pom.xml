@@ -35,7 +35,7 @@
 								<applicationName>TestingMuleDeploy</applicationName>
 								<environment>Sandbox</environment>
 								<businessGroup>Wipro</businessGroup>
-								<region>US East(N. Virginia)</region>
+								<region>US (East)</region>
 								<uri>https://anypoint.mulesoft.com</uri>
 								<workers>1</workers>
 								<workerType>Micro</workerType>

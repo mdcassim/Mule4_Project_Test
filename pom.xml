@@ -27,7 +27,7 @@
 				<configuration>
 				<cloudHubDeployment>
 								
-								<muleVersion>3.8.7</muleVersion>
+								<muleVersion>4.1.4</muleVersion>
 								<deploymentTimeout>300000</deploymentTimeout>
 								<username>ankitshastri05</username>
 								<password>Ashu52824@</password>

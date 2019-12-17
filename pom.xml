@@ -32,11 +32,11 @@
 								<username>ankitshastri05</username>
 								<password>Ashu52824@</password>
 								
-								<applicationName>Testing</applicationName>
+								<applicationName>TestingMuleDeploy</applicationName>
 								<environment>Sandbox</environment>
-								<businessGroup>${anypoint.businessGroup}</businessGroup>
-								<region>${cloudhub.region}</region>
-								<uri>https://anypoint.mulesoft.com/cloudhub/#/console/home/applications</uri>
+								<businessGroup>Wipro</businessGroup>
+								<region>US East(N. Virginia)</region>
+								<uri>https://anypoint.mulesoft.com</uri>
 								<workers>1</workers>
 								<workerType>Micro</workerType>
 								</cloudHubDeployment>

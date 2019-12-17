@@ -29,7 +29,7 @@ pipeline {
         stage('Deliver') {
             steps {
 				echo "Testing phase"
-                 sh 'curl -uadmin:APPDy1dGfcPXfLc5qXpRykPgPq -T /home/jenkins/node/workspace/Mule_CICD_Abhishek/target/test1-1.0.0-SNAPSHOT-mule-application.jar "http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local/$BUILD_NUMBER/test1-1.0.0-SNAPSHOT-mule-application.jar"'
+                 sh 'curl -uadmin:APPDy1dGfcPXfLc5qXpRykPgPq -T /home/jenkins/node/workspace/Mule_CICD_Abhishek/target/test1-1.0.0-SNAPSHOT-mule-application.jar "http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local/$BUILD_NUMBER/test1-1.0.0-SNAPSHOT-mule-application.zip"'
 			}
         }
 		stage('Deploy CloudHub') { 
@@ -37,7 +37,7 @@ pipeline {
 			//	ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
 			//}
 			steps {
-				sh 'curl -uadmin:APPDy1dGfcPXfLc5qXpRykPgPq -O "http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local/$BUILD_NUMBER/test1-1.0.0-SNAPSHOT-mule-application.jar"'
+				sh 'curl -uadmin:APPDy1dGfcPXfLc5qXpRykPgPq -O "http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local/$BUILD_NUMBER/test1-1.0.0-SNAPSHOT-mule-application.zip"'
 				sh 'mvn clean deploy -Dmule.version=3.9.0 -Danypoint.username=ankitshastri05 -Danypoint.password=Ashu52824@ -Dorg.slf4j.simpleLogger.defaultLogLevel=debug'
 				}
 		}

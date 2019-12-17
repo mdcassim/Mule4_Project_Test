@@ -38,7 +38,7 @@ pipeline {
 			//}
 			steps {
 				sh 'curl -uadmin:APPDy1dGfcPXfLc5qXpRykPgPq -O "http://mdcassimsait.southindia.cloudapp.azure.com:8081/artifactory/example-repo-local/$BUILD_NUMBER/test1-1.0.0-SNAPSHOT-mule-application.zip"'
-				sh 'mvn clean deploy -Dmule.version=3.8.7 -Danypoint.username=ankitshastri05 -Danypoint.password=Ashu52824@ -Dorg.slf4j.simpleLogger.defaultLogLevel=debug'
+				sh 'mvn clean deploy -Dmule.version=4.1.4 -Danypoint.username=ankitshastri05 -Danypoint.password=Ashu52824@ -Dorg.slf4j.simpleLogger.defaultLogLevel=debug'
 				}
 		}
     }

@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo "Middle Stage"
             }
-           // post {
+           // post { Testing
              //   always {
                    // junit 'target/surefire-reports/*.xml'
               //  }
